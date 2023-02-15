@@ -1,14 +1,29 @@
 #!/usr/bin/env bash
 
+# exit upon failure
+set -e
 
-set -euo pipefail
-IFS=$'\n\t'
+# setup
+[[ -n "${DEBUG_SCRIPT}" ]] && set -xv
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+# shell swag
+RED="\033[1;91m"
+CYAN="\033[1;36m"
+GREEN="\033[1;32m"
+WHITE="\033[1;38;5;231m"
+RESET="\n\033[0m"
+
+# logging
+log_std() { echo -e "${CYAN}==> ${WHITE}${1}${RESET}"; }
+log_err() { echo -e "${RED}==> ${WHITE}${1}${RESET}"; }
 
 formula="${1}"
 version="${2}"
 sha="${3}"
+
+log_std "Formula is ${GREEN}${formula}"
+log_std "Version is ${GREEN}${version}"
+log_std "Sha is ${GREEN}${sha}"
 
 [[ -z "${formula}" ]] && exit 1
 [[ -z "${version}" ]] && exit 1
