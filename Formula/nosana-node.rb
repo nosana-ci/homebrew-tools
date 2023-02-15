@@ -14,8 +14,8 @@ class NosanaNode < Formula
 
     system "shasum", "-c", "#{jar}.sha256sum"
 
-    mkdir libexec
-    mv "#{jar}" libexec/"#{jar}"
+    mkdir_p libexec/
+    cp "#{jar}" libexec/"#{jar}"
 
     bin.write_jar_script libexec/"#{jar}", "nosana-node"
 
