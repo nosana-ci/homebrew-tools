@@ -12,7 +12,7 @@ class NosanaNode < Formula
 
     jar = "nosana-node-v#{version}"
 
-    system "shasum", "-c", "#{binary}.sha256sum"
+    system "shasum", "-c", "#{jar}.sha256sum"
 
     bin.write_jar_script libexec/"#{jar}", "nosana-node"
 
