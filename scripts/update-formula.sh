@@ -18,4 +18,4 @@ sha="${3}"
 sed -E -i \
   -e "s/v[0-9]+.[0-9]+.[0-9]+/${version}/g" \
   -e "s/sha256 \"[0-9a-z]+\"/sha256 \"${sha}\"/" \
-  "${formula}"
+  "Formula/${formula}"
