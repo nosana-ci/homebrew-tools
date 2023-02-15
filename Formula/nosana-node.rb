@@ -10,7 +10,7 @@ class NosanaNode < Formula
 
   def install
 
-    jar = "devex-#{os}-v#{version}"
+    jar = "nosana-node-v#{version}"
 
     system "shasum", "-c", "#{binary}.sha256sum"
 
