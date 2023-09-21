@@ -1,8 +1,8 @@
 class NosanaNode < Formula
   desc "The official Nosana Node command-line interface."
   homepage "https://nosana.io/"
-  url "https://github.com/nosana-ci/nosana-node/releases/download/v0.3.169/all-files-v0.3.169.tar.gz"
-  sha256 "9fa086e781f3a394987fa1f457f831767cce9b172e0456e9d30c422ac4b73ccf"
+  url "https://github.com/nosana-ci/nosana-node/releases/download/v0.3.185/all-files-v0.3.185.tar.gz"
+  sha256 "edef792f2636ed49ab981417786be8531d5d47275fb83bf69385e0e0a8a8c1e2"
   license "MIT-Modern-Variant"
   head "https://github.com/nosana-ci/nosana-node.git", branch: "main"
 
